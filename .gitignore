@@ -2,3 +2,5 @@
 /.DS_Store
 uploads
 /uploads
+node_modules
+/node_modules

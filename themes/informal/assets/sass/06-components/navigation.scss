@@ -10,7 +10,7 @@
 	padding-top: calc(0.5 * var(--global--spacing-vertical));
 	padding-bottom: calc(0.25 * var(--global--spacing-vertical));
 
-	@include media(mobile-only) {
+	@include media(wide-only) {
 		display: flex;
 	}
 
@@ -104,7 +104,7 @@
 		transition: all .15s ease-in-out;
 		transform: translateY(var(--global--spacing-vertical));
 
-		@include media(mobile-only) {
+		@include media(wide-only) {
 			height: 100vh;
 			z-index: 499;
 			overflow-x: hidden;
@@ -133,7 +133,7 @@
 	// Mobile menu open
 	.primary-navigation-open & {
 
-		@include media(mobile-only) {
+		@include media(wide-only) {
 			width: 100%;
 			position: fixed;
 			z-index: 2; // To be greater than the cover block and embeds.
@@ -148,7 +148,7 @@
 	}
 
 	.primary-navigation-open .has-logo.has-title-and-tagline & {
-		@include media(mobile-only) {
+		@include media(wide-only) {
 
 			> .primary-menu-container {
 				transform: translateX(0) translateY(0);
@@ -156,7 +156,7 @@
 		}
 	}
 
-	@include media(mobile) {
+	@include media(wide) {
 		position: relative;
 		margin-left: auto;
 
@@ -202,7 +202,7 @@
 		padding-left: 0;
 		position: relative;
 
-		@include media(mobile-only) {
+		@include media(wide-only) {
 			padding-bottom: 100px;
 
 			ul {
@@ -215,7 +215,7 @@
 			position: relative;
 			width: 100%;
 
-			@include media(mobile) {
+			@include media(wide) {
 				margin: 0;
 				width: inherit;
 
@@ -227,7 +227,7 @@
 
 		// Sub-menu buttons
 		.sub-menu-toggle {
-			display: flex;
+			display: none;
 			height: calc(2 * var(--primary-nav--padding) + 1.15em + 1px);
 			width: 44px;
 			padding: 0;
@@ -241,7 +241,7 @@
 				outline: 2px solid var(--wp--style--color--link, var(--global--color-primary));
 			}
 
-			@include media(mobile-only) {
+			@include media(wide-only) {
 				display: none;
 			}
 
@@ -278,10 +278,10 @@
 
 			position: relative;
 
-			@include media(mobile) {
+			@include media(wide) {
 				left: 0;
 				margin: 0;
-				min-width: max-content;
+				min-width: 190px;
 				position: absolute;
 				top: 100%;
 				padding-top: 3px;
@@ -299,6 +299,7 @@
 					border-style: solid;
 					border-color: var(--primary-nav--border-color) transparent;
 					border-width: 0 7px 10px 7px;
+					display: none;
 				}
 
 				&:after {
@@ -357,7 +358,7 @@
 	}
 
 	.primary-menu-container {
-		@include media(mobile) {
+		@include media(wide) {
 			// Better align with the site title when the menu wraps.
 			margin-right: calc(0px - var(--primary-nav--padding));
 			margin-left: calc(0px - var(--primary-nav--padding));
@@ -382,18 +383,15 @@
 	a {
 		display: block;
 		font-family: var(--primary-nav--font-family-mobile);
-		font-size: var(--primary-nav--font-size-mobile);
-		font-weight: var(--primary-nav--font-weight);
+		//font-size: var(--primary-nav--font-size-mobile);
+		//font-weight: var(--primary-nav--font-weight);
 		padding: var(--primary-nav--padding) 0;
 		text-decoration: none;
+		font-size: 17px;
+    	font-weight: 400;
+    	letter-spacing: 1px;
 
-		@include media(mobile) {
-			display: block;
-			font-family: var(--primary-nav--font-family);
-			font-size: var(--primary-nav--font-size);
-			font-weight: var(--primary-nav--font-weight);
-		}
-
+		
 		+ svg {
 			fill: var(--primary-nav--color-text);
 		}
@@ -404,11 +402,7 @@
 			color: var(--primary-nav--color-link-hover);
 		}
 
-		&:hover {
-			text-decoration: underline;
-			text-decoration-style: dotted;
-		}
-
+		
 		&:focus {
 			position: relative;
 			z-index: 99999; // Ensure focus styles appear above absolute positioned elements
@@ -419,13 +413,10 @@
 
 	.current-menu-item > a:first-child,
 	.current_page_item > a:first-child {
-		text-decoration: underline;
+		
 		text-decoration-style: solid;
 
-		&:hover {
-			text-decoration: underline;
-			text-decoration-style: dotted;
-		}
+		
 	}
 
 	// Sub-menu depth indicators + text styles
@@ -441,7 +432,7 @@
 		}
 
 		// Sub-menu items om wide screens.
-		@include media(mobile) {
+		@include media(wide) {
 
 			// For nested sub-menus, don't duplicate the padding
 			> .menu-item > .sub-menu {
@@ -451,7 +442,7 @@
 
 		.menu-item {
 
-			@include media(mobile-only) {
+			@include media(wide-only) {
 
 				&:last-child {
 					margin-bottom: 0;
@@ -465,7 +456,7 @@
 				font-size: var(--primary-nav--font-size-sub-menu-mobile);
 				font-style: var(--primary-nav--font-style-sub-menu-mobile);
 
-				@include media(mobile) {
+				@include media(wide) {
 					font-size: var(--primary-nav--font-size-sub-menu);
 					font-style: var(--primary-nav--font-style);
 				}
@@ -480,7 +471,7 @@
 			display: none;
 		}
 
-		@include media(mobile) {
+		@include media(wide) {
 
 			> .svg-icon {
 				display: inline-block;
@@ -508,7 +499,7 @@
 }
 
 // Keep the menu pinned to the top when the menu is open.
-@include media(mobile-only) {
+@include media(wide-only) {
 
 	.lock-scrolling .site {
 		position: fixed;

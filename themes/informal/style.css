@@ -853,17 +853,6 @@ template {
 	margin-right: auto;
 }
 
-.site-header {
-	padding-top: calc(0.75 * var(--global--spacing-vertical));
-	padding-bottom: calc(2 * var(--global--spacing-vertical));
-}
-@media only screen and (min-width: 482px) {
-
-	.site-header {
-		padding-bottom: calc(3 * var(--global--spacing-vertical));
-	}
-}
-
 /**
  * Site-main children wrappers
  * - Add double vertical margins here for clearer hierarchy
@@ -3784,25 +3773,24 @@ table.wp-calendar-table caption {
 /* Category 06 contains all "bigger" components which contain elements of the previous two categories like header, footer, page template, single template, comments section, archives, ... */
 .site-header {
 	display: flex;
-	align-items: flex-start;
+	align-items: center;
 	flex-wrap: wrap;
 	row-gap: var(--global--spacing-vertical);
+	padding-top: 15px;
+	padding-bottom: 15px;
 }
 
 .wp-custom-logo .site-header {
 	align-items: center;
 }
-@media only screen and (min-width: 482px) {
 
-	.site-header {
-		padding-top: calc(var(--global--spacing-vertical) / 0.75);
-	}
-}
-@media only screen and (min-width: 822px) {
-
-	.site-header {
-		padding-top: calc(2.4 * var(--global--spacing-vertical));
-	}
+.site-header::before {
+	font-family: FontAwesome;
+	content: "\f13d";
+	font-size: 30px;
+	letter-spacing: 1px;
+	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.37);
+	padding-right: 8px;
 }
 
 .site-branding {
@@ -3815,22 +3803,17 @@ table.wp-calendar-table caption {
 	width: 100%;
 	text-align: center;
 }
-@media only screen and (min-width: 482px) {
-
-	.site-branding {
-		margin-right: initial;
-		margin-top: 4px;
-	}
-}
 
 .site-title {
 	color: var(--branding--color-link);
 	font-family: var(--branding--title--font-family);
-	font-size: var(--branding--title--font-size-mobile);
 	letter-spacing: normal;
 	text-transform: var(--branding--title--text-transform);
 	line-height: var(--global--line-height-heading);
-	margin-bottom: calc(var(--global--spacing-vertical) / 6);
+	font-size: 30px;
+	font-weight: 600;
+	letter-spacing: 1px;
+	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.37);
 }
 
 .site-title a {
@@ -4623,7 +4606,7 @@ h1.page-title {
 	padding-top: calc(0.5 * var(--global--spacing-vertical));
 	padding-bottom: calc(0.25 * var(--global--spacing-vertical));
 }
-@media only screen and (max-width: 481px) {
+@media only screen and (max-width: 1023px) {
 
 	.menu-button-container {
 		display: flex;
@@ -4709,7 +4692,7 @@ h1.page-title {
 	transition: all 0.15s ease-in-out;
 	transform: translateY(var(--global--spacing-vertical));
 }
-@media only screen and (max-width: 481px) {
+@media only screen and (max-width: 1023px) {
 
 	.primary-navigation > .primary-menu-container {
 		height: 100vh;
@@ -4736,7 +4719,7 @@ h1.page-title {
 		border: 2px solid var(--global--color-primary);
 	}
 }
-@media only screen and (max-width: 481px) {
+@media only screen and (max-width: 1023px) {
 
 	.primary-navigation-open .primary-navigation {
 		width: 100%;
@@ -4751,13 +4734,13 @@ h1.page-title {
 	opacity: 1;
 	transform: translateY(0);
 }
-@media only screen and (max-width: 481px) {
+@media only screen and (max-width: 1023px) {
 
 	.primary-navigation-open .has-logo.has-title-and-tagline .primary-navigation > .primary-menu-container {
 		transform: translateX(0) translateY(0);
 	}
 }
-@media only screen and (min-width: 482px) {
+@media only screen and (min-width: 1024px) {
 
 	.primary-navigation {
 		position: relative;
@@ -4801,7 +4784,7 @@ h1.page-title {
 	padding-left: 0;
 	position: relative;
 }
-@media only screen and (max-width: 481px) {
+@media only screen and (max-width: 1023px) {
 
 	.primary-navigation > div > .menu-wrapper {
 		padding-bottom: 100px;
@@ -4817,7 +4800,7 @@ h1.page-title {
 	position: relative;
 	width: 100%;
 }
-@media only screen and (min-width: 482px) {
+@media only screen and (min-width: 1024px) {
 
 	.primary-navigation > div > .menu-wrapper li {
 		margin: 0;
@@ -4830,7 +4813,7 @@ h1.page-title {
 }
 
 .primary-navigation > div > .menu-wrapper .sub-menu-toggle {
-	display: flex;
+	display: none;
 	height: calc(2 * var(--primary-nav--padding) + 1.15em + 1px);
 	width: 44px;
 	padding: 0;
@@ -4844,7 +4827,7 @@ h1.page-title {
 .primary-navigation > div > .menu-wrapper .sub-menu-toggle:focus {
 	outline: 2px solid var(--wp--style--color--link, var(--global--color-primary));
 }
-@media only screen and (max-width: 481px) {
+@media only screen and (max-width: 1023px) {
 
 	.primary-navigation > div > .menu-wrapper .sub-menu-toggle {
 		display: none;
@@ -4878,12 +4861,12 @@ h1.page-title {
 .primary-navigation > div > .menu-wrapper > li > .sub-menu {
 	position: relative;
 }
-@media only screen and (min-width: 482px) {
+@media only screen and (min-width: 1024px) {
 
 	.primary-navigation > div > .menu-wrapper > li > .sub-menu {
 		left: 0;
 		margin: 0;
-		min-width: max-content;
+		min-width: 190px;
 		position: absolute;
 		top: 100%;
 		padding-top: 3px;
@@ -4902,6 +4885,7 @@ h1.page-title {
 		border-style: solid;
 		border-color: var(--primary-nav--border-color) transparent;
 		border-width: 0 7px 10px 7px;
+		display: none;
 	}
 
 	.primary-navigation > div > .menu-wrapper > li > .sub-menu:after {
@@ -4955,7 +4939,7 @@ h1.page-title {
 .primary-navigation .primary-menu > .menu-item:hover > a {
 	color: var(--primary-nav--color-link-hover);
 }
-@media only screen and (min-width: 482px) {
+@media only screen and (min-width: 1024px) {
 
 	.primary-navigation .primary-menu-container {
 		margin-right: calc(0px - var(--primary-nav--padding));
@@ -4979,19 +4963,11 @@ h1.page-title {
 .primary-navigation a {
 	display: block;
 	font-family: var(--primary-nav--font-family-mobile);
-	font-size: var(--primary-nav--font-size-mobile);
-	font-weight: var(--primary-nav--font-weight);
 	padding: var(--primary-nav--padding) 0;
 	text-decoration: none;
-}
-@media only screen and (min-width: 482px) {
-
-	.primary-navigation a {
-		display: block;
-		font-family: var(--primary-nav--font-family);
-		font-size: var(--primary-nav--font-size);
-		font-weight: var(--primary-nav--font-weight);
-	}
+	font-size: 17px;
+	font-weight: 400;
+	letter-spacing: 1px;
 }
 
 .primary-navigation a + svg {
@@ -5004,11 +4980,6 @@ h1.page-title {
 	color: var(--primary-nav--color-link-hover);
 }
 
-.primary-navigation a:hover {
-	text-decoration: underline;
-	text-decoration-style: dotted;
-}
-
 .primary-navigation a:focus {
 	position: relative;
 	z-index: 99999;
@@ -5018,14 +4989,7 @@ h1.page-title {
 
 .primary-navigation .current-menu-item > a:first-child,
 .primary-navigation .current_page_item > a:first-child {
-	text-decoration: underline;
 	text-decoration-style: solid;
-}
-
-.primary-navigation .current-menu-item > a:first-child:hover,
-.primary-navigation .current_page_item > a:first-child:hover {
-	text-decoration: underline;
-	text-decoration-style: dotted;
 }
 
 .primary-navigation .sub-menu {
@@ -5039,13 +5003,13 @@ h1.page-title {
 .primary-navigation .sub-menu .sub-menu {
 	border: none;
 }
-@media only screen and (min-width: 482px) {
+@media only screen and (min-width: 1024px) {
 
 	.primary-navigation .sub-menu > .menu-item > .sub-menu {
 		padding: 0;
 	}
 }
-@media only screen and (max-width: 481px) {
+@media only screen and (max-width: 1023px) {
 
 	.primary-navigation .sub-menu .menu-item:last-child {
 		margin-bottom: 0;
@@ -5058,7 +5022,7 @@ h1.page-title {
 	font-size: var(--primary-nav--font-size-sub-menu-mobile);
 	font-style: var(--primary-nav--font-style-sub-menu-mobile);
 }
-@media only screen and (min-width: 482px) {
+@media only screen and (min-width: 1024px) {
 
 	.primary-navigation .sub-menu .menu-item > a {
 		font-size: var(--primary-nav--font-size-sub-menu);
@@ -5069,7 +5033,7 @@ h1.page-title {
 .primary-navigation .menu-item-has-children > .svg-icon {
 	display: none;
 }
-@media only screen and (min-width: 482px) {
+@media only screen and (min-width: 1024px) {
 
 	.primary-navigation .menu-item-has-children > .svg-icon {
 		display: inline-block;
@@ -5093,7 +5057,7 @@ h1.page-title {
 	display: inline-block;
 }
 
-@media only screen and (max-width: 481px) {
+@media only screen and (max-width: 1023px) {
 
 	.lock-scrolling .site {
 		position: fixed;
