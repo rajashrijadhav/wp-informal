@@ -627,6 +627,8 @@ template {
 
 .widget-area {
 	max-width: calc(100vw - 30px);
+	margin-left: auto;
+	margin-right: auto;
 }
 
 @media only screen and (min-width: 482px) {
@@ -949,7 +951,6 @@ template {
  */
 .site-header,
 .site-main,
-.widget-area,
 .site-footer {
 	padding-top: 30px;
 	padding-bottom: 30px;
@@ -1085,28 +1086,6 @@ template {
 	margin-bottom: 0;
 }
 
-.site-footer > * {
-	margin-top: 20px;
-	margin-bottom: 20px;
-}
-
-.widget-area > * {
-	margin-top: 20px;
-	margin-bottom: 20px;
-}
-@media only screen and (min-width: 482px) {
-
-	.site-footer > * {
-		margin-top: 30px;
-		margin-bottom: 30px;
-	}
-
-	.widget-area > * {
-		margin-top: 30px;
-		margin-bottom: 30px;
-	}
-}
-
 /*
  * Block & non-gutenberg content wrapper children
  * - Sets spacing-unit margins
@@ -1226,6 +1205,7 @@ html {
 	box-sizing: border-box;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	line-height: 1.7;
+	scroll-behavior: smooth;
 }
 
 /**
@@ -2943,6 +2923,7 @@ input[type=reset]:disabled {
 .wp-block-group .wp-block-group__inner-container {
 	margin-left: auto;
 	margin-right: auto;
+	color: #666;
 }
 
 .wp-block-group .wp-block-group__inner-container > * {
@@ -5083,6 +5064,10 @@ table.wp-calendar-table caption {
 	}
 }
 
+.footer-wrap {
+	background: #191919;
+}
+
 .site-footer {
 	padding-top: 0;
 	padding-bottom: 51px;
@@ -5100,11 +5085,10 @@ table.wp-calendar-table caption {
 
 .site-footer > .site-info {
 	padding-top: 30px;
-	color: #28303d;
+	color: #666;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-size: 1.125rem;
 	line-height: 1.7;
-	border-top: 3px solid #28303d;
 }
 
 .site-footer > .site-info .site-name {
@@ -5114,10 +5098,12 @@ table.wp-calendar-table caption {
 
 .site-footer > .site-info .privacy-policy {
 	margin-top: 15px;
+	text-align: center;
 }
 
 .site-footer > .site-info .powered-by {
 	margin-top: 15px;
+	text-align: center;
 }
 @media only screen and (min-width: 822px) {
 
@@ -5134,6 +5120,8 @@ table.wp-calendar-table caption {
 	.site-footer > .site-info .powered-by {
 		margin-top: initial;
 		margin-left: auto;
+		margin-right: auto;
+		color: #666;
 	}
 
 	.site-footer > .site-info .privacy-policy + .powered-by {
@@ -5143,22 +5131,17 @@ table.wp-calendar-table caption {
 
 .site-footer > .site-info a {
 	color: #28303d;
+	text-decoration: none;
 }
 
-.site-footer > .site-info a:link {
-	color: #28303d;
-}
-
-.site-footer > .site-info a:visited {
-	color: #28303d;
-}
-
+.site-footer > .site-info a:link,
+.site-footer > .site-info a:visited,
 .site-footer > .site-info a:active {
-	color: #28303d;
+	color: #666;
 }
 
 .site-footer > .site-info a:hover {
-	color: #28303d;
+	color: #ddd;
 }
 
 .site-footer > .site-info a:focus {
@@ -5171,6 +5154,16 @@ table.wp-calendar-table caption {
 
 .has-background-white .site-footer > .site-info a:focus {
 	color: #fff;
+}
+
+.move-top {
+	text-align: center;
+}
+
+.move-top a {
+	font-size: 40px;
+	color: #ddd;
+	text-decoration: none;
 }
 
 .singular .entry-header {
@@ -6740,7 +6733,7 @@ h1.page-title {
 }
 
 .widget-area {
-	margin-top: 180px;
+	padding: 48px 0;
 	padding-bottom: 10px;
 	color: #28303d;
 	font-size: 1.125rem;
@@ -6757,7 +6750,7 @@ h1.page-title {
 @media only screen and (min-width: 1024px) {
 
 	.widget-area {
-		grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: repeat(4, 1fr);
 	}
 }
 @media only screen and (max-width: 481px) {
@@ -6782,6 +6775,10 @@ h1.page-title {
 	clear: both;
 }
 
+.widget-area section {
+	margin-bottom: 20px;
+}
+
 .widget h1,
 .widget h2,
 .widget h3,
@@ -6798,6 +6795,10 @@ h1.page-title {
 
 .widget h2 {
 	font-size: 1.125rem;
+	font-size: 23px;
+	color: #eee;
+	letter-spacing: 2px;
+	text-transform: uppercase;
 }
 
 .widget h3,
@@ -6827,26 +6828,24 @@ h1.page-title {
 
 .widget a {
 	color: #28303d;
-	text-decoration: underline;
-	text-decoration-style: solid;
-	text-decoration-color: currentColor;
+	text-decoration: none;
+	font-size: 16px;
+	line-height: 28px;
+	color: #666;
+	letter-spacing: 1px;
+	display: block;
+	margin-bottom: 3px;
 }
 
-.widget a:link {
-	color: #28303d;
-}
-
-.widget a:visited {
-	color: #28303d;
-}
-
+.widget a:link,
+.widget a:visited,
 .widget a:active {
-	color: #28303d;
+	color: #666;
+	text-decoration: none;
 }
 
 .widget a:hover {
-	color: #28303d;
-	text-decoration-style: dotted;
+	color: #ddd;
 }
 
 .search-form {
@@ -6901,6 +6900,10 @@ h1.page-title {
 
 .widget_rss a.rsswidget .rss-widget-icon {
 	display: none;
+}
+
+.widget_block {
+	margin-bottom: 20px;
 }
 
 /* Category 07 is for any utility classes that are not assigned to a specific component. */
