@@ -87,15 +87,15 @@
 .wp-block-post-template :where(li > *) { // using :where keeps specificity low.
 
 	margin-top: calc(0.666 * var(--global--spacing-vertical));
-	margin-bottom: calc(0.666 * var(--global--spacing-vertical));
+	//margin-bottom: calc(0.666 * var(--global--spacing-vertical));
 
 	@include media(mobile) {
 		margin-top: var(--global--spacing-vertical);
-		margin-bottom: var(--global--spacing-vertical);
+		//margin-bottom: var(--global--spacing-vertical);
 	}
 
 	&:first-child {
-		margin-top: 0;
+		margin-top: 0; 
 	}
 
 	&:last-child {
