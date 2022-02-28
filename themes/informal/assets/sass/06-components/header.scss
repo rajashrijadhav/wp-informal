@@ -15,15 +15,6 @@
 	}
 }
 
-.site-header::before{
-	font-family: FontAwesome;
-    content: "\f13d";
-	font-size: 30px;
-    letter-spacing: 1px;
-    text-shadow: 0 1px 2px rgb(0 0 0 / 37%);
-	padding-right: 8px;
-}
-
 // Site branding
 .site-branding {
 	color: var(--branding--color-text);
@@ -34,8 +25,6 @@
 		width: 100%;
 		text-align: center;
 	}
-
-	
 }
 
 // Site title
@@ -143,7 +132,7 @@
 							max-height: calc(var(--button--padding-vertical) - (0.25 * var(--global--spacing-unit)) + 1.7em);
 						}
 					}
-				}
+				} 
 			}
 
 			&.has-title-and-tagline {

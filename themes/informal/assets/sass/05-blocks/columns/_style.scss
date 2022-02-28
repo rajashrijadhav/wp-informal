@@ -103,3 +103,9 @@
 		}
 	}
 }
+.wp-block-group .wp-block-group__inner-container {
+	padding: 48px 0;
+}
+:where(.wp-block-columns.has-background){
+	padding: 48px 0;
+}
