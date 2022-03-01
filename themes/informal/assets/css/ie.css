@@ -6904,6 +6904,10 @@ h1.page-title {
 	margin-top: 16px;
 }
 
+.wp-block-columns.wp-block-columns {
+	gap: 40px;
+}
+
 .slide-content {
 	max-width: 1000px;
 	margin: 0 auto;
