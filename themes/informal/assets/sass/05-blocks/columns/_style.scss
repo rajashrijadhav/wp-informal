@@ -109,3 +109,7 @@
 :where(.wp-block-columns.has-background){
 	padding: 48px 0;
 }
+
+.wp-block-columns.wp-block-columns {
+	gap: 40px;
+}
