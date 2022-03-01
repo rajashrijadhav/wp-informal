@@ -107,6 +107,15 @@ if ( function_exists( 'register_block_style' ) ) {
 				'label' => esc_html__( 'Dark gray', 'twentytwentyone' ),
 			)
 		);
+
+		// Social icons: Dark gray color.
+		register_block_style(
+			'outermost/icon-block',
+			array(
+				'name'  => 'rounded',
+				'label' => esc_html__( 'Rounded', 'twentytwentyone' ),
+			)
+		);
 	}
 	add_action( 'init', 'twenty_twenty_one_register_block_styles' );
 }

@@ -4689,6 +4689,16 @@ table.wp-calendar-table caption {
 	}
 }
 
+.is-style-rounded.is-style-rounded .icon-container {
+	width: 80px !important;
+	height: 80px;
+	border-radius: 50%;
+}
+
+.is-style-rounded.is-style-rounded svg {
+	max-width: 30px;
+}
+
 /* Block Alignments */
 
 /**
