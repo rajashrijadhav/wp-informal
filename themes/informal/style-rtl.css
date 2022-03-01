@@ -1985,6 +1985,10 @@ input[type=reset]:disabled,
 	padding: 48px 0;
 }
 
+.wp-block-columns.wp-block-columns {
+	gap: 40px;
+}
+
 .wp-block-cover,
 .wp-block-cover-image {
 	background-color: var(--cover--color-background);
@@ -2137,6 +2141,10 @@ input[type=reset]:disabled,
 .wp-block-cover[class*=-background-color][class] .wp-block-cover__inner-container,
 .wp-block-cover-image[class*=-background-color][class] .wp-block-cover__inner-container {
 	background-color: unset;
+}
+
+.wp-block-cover h4 {
+	margin-top: 16px;
 }
 
 .wp-block-file a.wp-block-file__button:active,
@@ -3619,6 +3627,7 @@ table.wp-calendar-table caption {
 	width: 80px !important;
 	height: 80px;
 	border-radius: 50%;
+	text-align: center;
 }
 
 .is-style-rounded.is-style-rounded svg {
@@ -5538,14 +5547,6 @@ h1.page-title {
 .is-separator {
 	border-left: 1px solid #555;
 	border-right: 1px solid #555;
-}
-
-.wp-block-cover h4 {
-	margin-top: 16px;
-}
-
-.wp-block-columns.wp-block-columns {
-	gap: 40px;
 }
 
 .slide-content {
