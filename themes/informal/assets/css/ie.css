@@ -7036,6 +7036,10 @@ h1.page-title {
 	text-transform: capitalize;
 }
 
+.map-container .wpmapblockrender {
+	max-width: 100% !important;
+}
+
 /* Category 07 is for any utility classes that are not assigned to a specific component. */
 .screen-reader-text {
 	border: 0;
