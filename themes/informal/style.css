@@ -1999,6 +1999,10 @@ input[type=reset]:disabled,
 	gap: 40px;
 }
 
+.is-shadow {
+	box-shadow: 7px 7px 10px 0 rgba(76, 110, 245, 0.1);
+}
+
 .wp-block-cover,
 .wp-block-cover-image {
 	background-color: var(--cover--color-background);
@@ -2399,6 +2403,10 @@ h6,
 		margin-left: 0;
 		margin-right: 0;
 	}
+}
+
+.is-style-rounded figure img {
+	box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.3);
 }
 
 .wp-block-latest-comments {
@@ -3866,6 +3874,7 @@ table.wp-calendar-table caption {
 .site-title a {
 	color: currentColor;
 	font-weight: var(--branding--title--font-weight);
+	text-decoration: none;
 }
 
 .site-title a:link,
@@ -3890,10 +3899,6 @@ table.wp-calendar-table caption {
 	font-family: var(--branding--description--font-family);
 	font-size: var(--branding--description--font-size);
 	line-height: 1.4;
-}
-
-.site-title > a {
-	text-decoration-color: var(--global--color-secondary);
 }
 
 .site-logo {
