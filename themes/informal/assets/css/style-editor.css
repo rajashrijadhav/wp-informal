@@ -886,6 +886,10 @@ a:hover {
 	gap: 40px;
 }
 
+.is-shadow {
+	box-shadow: 7px 7px 10px 0 rgba(76, 110, 245, 0.1);
+}
+
 .wp-block-file .wp-block-file__textlink {
 	text-decoration: underline;
 	text-decoration-style: solid;
@@ -1152,6 +1156,10 @@ h6,
 
 .wp-block-image.is-style-twentytwentyone-image-frame img {
 	padding: var(--global--spacing-unit);
+}
+
+.is-style-rounded figure img {
+	box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.3);
 }
 
 .wp-block-latest-comments {
