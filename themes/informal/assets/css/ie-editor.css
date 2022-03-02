@@ -2598,6 +2598,53 @@ pre.wp-block-verse {
 	flex: 1;
 }
 
+.contact-form.wpforms-container-full .wpforms-form input[type=text],
+.contact-form.wpforms-container-full .wpforms-form input[type=number],
+.contact-form.wpforms-container-full .wpforms-form input[type=email],
+.contact-form.wpforms-container-full .wpforms-form textarea {
+	font-size: 15px;
+	color: #495057;
+	padding: 16px 16px;
+	border: 1px solid #ced4da;
+	background: #fff;
+	letter-spacing: 1px;
+	border-radius: 0;
+	width: 100%;
+	margin: 10px 0;
+	height: 50px;
+}
+
+.contact-form.wpforms-container-full .wpforms-form button {
+	width: 100%;
+}
+
+.contact-form.wpforms-container-full .wpforms-form button[type=submit] {
+	border-radius: 4px;
+	background: #333;
+	cursor: pointer;
+	font-size: 17px;
+	color: #fff;
+	outline: none;
+	height: 50px;
+	line-height: 50px;
+	padding: 0 30px;
+	text-align: center;
+	text-decoration: none;
+	text-transform: capitalize;
+	white-space: nowrap;
+	letter-spacing: 1px;
+}
+
+.contact-form.wpforms-container-full .wpforms-form ::placeholder {
+	color: #495057;
+	font-weight: 900;
+}
+
+.contact-form.wpforms-container-full .wpforms-form button[type=submit]:hover {
+	background: #fff;
+	color: #000;
+}
+
 /**
 * Editor Post Title
 * - Needs a special styles
